@@ -28,7 +28,7 @@ return(
      <input name="title" value={newBook.title} onChange={handleInputChange} id ='title' type ="text"/>
      <label htmlFor='author'>Author:</label> 
      <input name="author" value={newBook.author} onChange={handleInputChange} id = 'author' type="text" />
-   
+     <button type='submit'>Enter</button>
     </form>
       
   </div>
