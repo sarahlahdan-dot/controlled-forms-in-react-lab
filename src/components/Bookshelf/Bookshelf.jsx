@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import App from '../../App'; 
+
 
 function Bookshelf(){
 const [books,setBook] = useState([]);  
 const [newBook, setNewBook] = useState(
-  {title:'', author:''}
+  {title:'', author:'',}
 );
 
 function handleInputChange(event){
@@ -13,9 +13,9 @@ function handleInputChange(event){
 }
 
 function handleSubmit(event){
-  event.preventDefault()
+  event.preventDefault();
   setBook([...books,newBook]);
-  setNewBook({title:'', author:''})
+  setNewBook({title:'', author:''});
 }
 
 return(
@@ -23,11 +23,16 @@ return(
 <div className="bookshelfDiv">
   <div className="formDiv">
     <h3>Add a Book</h3>
-    <form onSubmit={handleSubmit}/>
-     <input name="title" value={newBook.title} onChange={handleInputChange} type ="text"/>
-     <input name="author" value={newBook.author} onChange={handleInputChange} type="text" />
+    <form onSubmit={handleSubmit}>
+     <label htmlFor='title'>Title:</label>
+     <input name="title" value={newBook.title} onChange={handleInputChange} id ='title' type ="text"/>
+     <label htmlFor='author'>Author:</label> 
+     <input name="author" value={newBook.author} onChange={handleInputChange} id = 'author' type="text" />
    
+    </form>
+      
   </div>
+
   {books.map((book)=>
   <div className="bookCardsDiv">
 
