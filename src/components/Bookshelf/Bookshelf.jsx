@@ -34,10 +34,10 @@ return(
   </div>
 
   {books.map((book)=>
-  <div className="bookCardsDiv">
+  <div key={book.id}>
 
-    <h2>{books.title}Title :</h2>
-    <h3>{books.author}Author :</h3>
+    <h2>Title :{book.title}</h2>
+    <h3>Author :{book.author}</h3>
 
     </div>
   )}
